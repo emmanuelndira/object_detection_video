@@ -85,15 +85,23 @@ pip install -r requirements.txt
 2) Run on a video file  
 Place a video at `data/input.mp4` (or update the path), then run:
 
+python src/detect_video.py --source data/input.mp4 --conf 0.2 --save
 python src/detect_video.py --source data/input.mp4 --conf 0.35 --save
+python src/detect_video.py --source data/input.mp4 --conf 0.6 --save
 
 3) Run on webcam  
 
 python src/detect_video.py --source 0 --conf 0.35 --save
 
+Notes  
+- The `--conf` parameter controls how confident the model must be before showing a detection  
+- Lower values show more detections (and more mistakes)  
+- Higher values show fewer detections but miss smaller or uncertain objects  
+
 Controls  
 - SPACE: pause / resume  
 - q: quit
+
 
 
 
