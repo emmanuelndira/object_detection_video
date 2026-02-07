@@ -77,11 +77,24 @@ At **0.60**, the model becomes much more selective. It tends to avoid uncertain 
 
 ## How to run
 
-### 1) Setup
+1) Setup  
 Create and activate a virtual environment, then install dependencies:
 
-```bash
 pip install -r requirements.txt
+
+2) Run on a video file  
+Place a video at `data/input.mp4` (or update the path), then run:
+
+python src/detect_video.py --source data/input.mp4 --conf 0.35 --save
+
+3) Run on webcam  
+
+python src/detect_video.py --source 0 --conf 0.35 --save
+
+Controls  
+- SPACE: pause / resume  
+- q: quit
+
 
 
 
