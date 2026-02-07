@@ -48,7 +48,7 @@ At **0.35**, there are fewer boxes, and the detections are generally more stable
 **What still went wrong:**
 - Some misidentifications remain (e.g., a **bag** misidentified as a **dog**)
 
-**Takeaway:** This setting was a good middle-ground — still able to detect smaller items like handbags/umbrellas more reliably than 0.20, without becoming overly conservative.
+**Takeaway:** This setting was a good middle ground — still able to detect smaller items like handbags/umbrellas more reliably than 0.20, without becoming overly conservative.
 
 ---
 
@@ -64,14 +64,14 @@ At **0.60**, the model becomes much more selective. It tends to avoid uncertain 
 ## What I learned
 - Confidence threshold tuning is essential: **lower = more detections but more errors**, **higher = fewer errors but more misses**.
 - Even strong pretrained models can confuse visually similar classes (e.g., buses/trains, signs/traffic lights).
-- Real-world conditions (angle, distance, motion blur, occlusion) influence detection quality significantly.
+- Real world conditions (angle, distance, motion blur, occlusion) influence detection quality significantly.
 
 ---
 
 ## Limitations
-- This project uses a **pretrained model** without fine-tuning on local footage.
-- No labelled ground-truth dataset was used, so evaluation here is **qualitative** (based on observed behaviour).
-- Counts printed by the script are rough (frame-level detections, not tracked objects).
+- This project uses a **pretrained model** without fine tuning on local footage.
+- No labelled ground truth dataset was used, so evaluation here is **qualitative** (based on observed behaviour).
+- Counts printed by the script are rough (frame level detections, not tracked objects).
 
 ---
 
@@ -82,3 +82,5 @@ Create and activate a virtual environment, then install dependencies:
 
 ```bash
 pip install -r requirements.txt
+
+
