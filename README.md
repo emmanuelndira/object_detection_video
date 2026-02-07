@@ -1,11 +1,11 @@
 # Object Detection on Video (YOLOv8 + OpenCV)
 
-This project explores object detection on real-world street footage using a pretrained YOLOv8 model. The goal was to understand how confidence thresholds affect detection quality, false positives, and missed detections in a video setting (rather than build a production system).
+This project explores object detection on real world street footage using a pretrained YOLOv8 model. The goal was to understand how confidence thresholds affect detection quality, false positives, and missed detections in a video setting (rather than build a production system).
 
 ## Demo Context
 - **Footage:** Pedestrian crossing in the Philippines (people + cars + buses + street signage)
 - **Model:** YOLOv8 (pretrained COCO weights)
-- **Focus:** Comparing confidence thresholds and observing real-world failure modes
+- **Focus:** Comparing confidence thresholds and observing real world failure modes
 
 ---
 
@@ -22,7 +22,7 @@ This project explores object detection on real-world street footage using a pret
 I ran the same video through the detector with three confidence thresholds and compared results.
 
 ### 1) `--conf 0.20` (more detections, more mistakes)
-At **0.20**, the model draws many boxes. A lot are correct, but there are more misclassifications and occasional confusion between similar-looking objects.
+At **0.20**, the model draws many boxes. A lot are correct, but there are more misclassifications and occasional confusion between similar looking objects.
 
 ![conf_0.20](screenshots/conf_0.20.png)
 
@@ -36,7 +36,7 @@ At **0.20**, the model draws many boxes. A lot are correct, but there are more m
 ---
 
 ### 2) `--conf 0.35` (balanced, more stable)
-At **0.35**, there are fewer boxes, and the detections are generally more stable and confident. This setting felt like the best trade-off for the footage.
+At **0.35**, there are fewer boxes, and the detections are generally more stable and confident. This setting felt like the best trade off for the footage.
 
 ![conf_0.35](screenshots/conf_0.35.png)
 
@@ -53,7 +53,7 @@ At **0.35**, there are fewer boxes, and the detections are generally more stable
 ---
 
 ### 3) `--conf 0.60` (very conservative)
-At **0.60**, the model becomes much more selective. It tends to avoid uncertain detections but can miss smaller or partially-occluded objects.
+At **0.60**, the model becomes much more selective. It tends to avoid uncertain detections but can miss smaller or partially occluded objects.
 
 ![conf_0.60](screenshots/conf_0.60.png)
 
@@ -82,5 +82,6 @@ Create and activate a virtual environment, then install dependencies:
 
 ```bash
 pip install -r requirements.txt
+
 
 
